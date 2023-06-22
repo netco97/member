@@ -80,4 +80,11 @@ public class MemberController {
         return "redirect:/member/"+ memberDTO.getId(); //그냥 return "detail"로 하면 detail에서 모델에 담아서 넘겨줬기 때문에 값이 안넘어감.
     }
 
+    @GetMapping("/member/delete/{id}")
+    public String deleteById(@PathVariable Long id){
+        memberService.deleteById(id);
+
+        return "redirect:/member/";
+    }
+
 }
