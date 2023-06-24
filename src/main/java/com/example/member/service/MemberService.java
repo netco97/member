@@ -86,6 +86,7 @@ public class MemberService {
     }
 
     public void deleteById(Long id) {
+        //deleteById메서드만 쓰면 됨.
         memberRepository.deleteById(id);
     }
 }
